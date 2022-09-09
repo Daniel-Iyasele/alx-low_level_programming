@@ -1,6 +1,6 @@
 #include <stdio.h>
+/*this program uses printf() function */
 /**
- *
  * main -entrypoint
  *
  * Return: always 0
