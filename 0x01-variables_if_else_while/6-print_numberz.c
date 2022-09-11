@@ -8,7 +8,7 @@
  */
 int main(void)
 {
-	char first_no = '0', last_no = '9';
+	int first_no = '0', last_no = '9';
 
 	while (first_no <= last_no)
 	{
