@@ -9,14 +9,22 @@
  */
 int main(void)
 {
-	char alpha = 'a';
-	char last_alpha = 'z';
+	/**
+	 * Variable alpha and alpha_C rep small and capital  alphabets respectively
+	 * last_alpha and last_C rep last lowercase and uppercase alphabets
+	 */
+	char alpha = 'a', alpha_C = 'A';
+	char last_alpha = 'z', last_C = 'Z';
 
 	while (alpha <= last_alpha)
 	{
 		putchar(alpha);
-		putchar(toupper(alpha));
 		alpha++;
+	}
+	while (alpha_C <= last_C)
+	{
+		putchar(alpha_C);
+		alpha_C++;
 	}
 	putchar('\n');
 	return (0);
