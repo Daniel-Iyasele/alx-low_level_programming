@@ -1,12 +1,6 @@
 #include "main.h"
 /* This program uses a function call to print the alphabet */
 /**
- * main- entrypoint
- *
- * Return: always 0
- */
-
-/**
  * print_alphabet - prints 'abcde...'
  */
 void print_alphabet(void)
@@ -17,14 +11,8 @@ void print_alphabet(void)
 
 	while (alpha <= last_alpha)
 	{
-		putchar(alpha);
+		_putchar(alpha);
 		alpha++;
 	}
-	putchar('\n');
-}
-
-int main(void)
-{
-	print_alphabet();
-	return (0);
+	_putchar('\n');
 }
