@@ -8,19 +8,16 @@
 int _islower(int c)
 {
 	int ret;
-	int charac = c;
 	int alpha = 'a', last_alpha = 'z';
 
 	while (alpha <= last_alpha)
 	{
-		if (charac == alpha)
+		if (c >= alpha)
 		{
 			ret = 1;
 		}
-		else if (charac != alpha)
-		{
+		else
 			ret = 0;
-		}
 		alpha++;
 	}
 	return (ret);
