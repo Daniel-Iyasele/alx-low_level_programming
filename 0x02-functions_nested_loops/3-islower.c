@@ -10,15 +10,15 @@ int _islower(int c)
 	int ret;
 	int alpha = 'a', last_alpha = 'z';
 
-	while (alpha <= last_alpha)
-	{
-		if (c >= alpha)
+	/*while (alpha <= last_alpha)*/
+	/*{*/
+		if (c >= alpha && c <= last_alpha)
 		{
 			ret = 1;
 		}
 		else
 			ret = 0;
-		alpha++;
-	}
+		/*alpha++;*/
+	/*}*/
 	return (ret);
 }
