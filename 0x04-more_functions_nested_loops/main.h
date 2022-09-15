@@ -9,3 +9,4 @@ int _putchar(char c);
 void print_most_numbers(void);
 void more_numbers(void);
 int _printer(char c);
+void print_line(int n);
