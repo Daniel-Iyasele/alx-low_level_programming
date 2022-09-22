@@ -17,10 +17,10 @@ void rev_string(char *s)
 	}
 
 	j = i - 1;
-	for (i =0; i < j; i++)
+	for (i = 0; i < j; i++)
 		end_ptr++;
 	n = 0;
-	while ( n < (j / 2))
+	while (n < (j / 2))
 	{
 		ch = *end_ptr;
 		*end_ptr = *beg_ptr;
