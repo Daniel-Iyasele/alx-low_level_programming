@@ -8,18 +8,13 @@
  */
 char *_strcpy(char *dest, char *src)
 {
-	int i, j, len_of_str;
+	int i;
 
 	i = 0;
 	while (*(src + i))
 	{
+		*dest = *(src + i);
 		i++;
-		/* for loop to get length of src string*/
-	}
-	len_of_str = i;
-	for (j = 0; j < len_of_str; j++)
-	{
-		*dest = *(src + j);
 		dest++;
 	}
 	return (dest);
