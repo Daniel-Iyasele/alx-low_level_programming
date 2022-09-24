@@ -20,7 +20,7 @@ void rev_string(char *s)
 	for (i = 0; i < j; i++)
 		end_ptr++;
 	n = 0;
-	while (n < (i / 2))
+	while (n <= (i / 2))
 	{
 		ch = *end_ptr;
 		*end_ptr = *beg_ptr;
