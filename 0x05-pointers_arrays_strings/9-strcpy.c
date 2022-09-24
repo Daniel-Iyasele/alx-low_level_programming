@@ -10,8 +10,10 @@ char *_strcpy(char *dest, char *src)
 {
 	int i, j, len_of_str;
 
-	for (i = 0; *(src + i) != '\0'; i++)
+	i = 0;
+	while (*(src + i))
 	{
+		i++;
 		/* for loop to get length of src string*/
 	}
 	len_of_str = i;
