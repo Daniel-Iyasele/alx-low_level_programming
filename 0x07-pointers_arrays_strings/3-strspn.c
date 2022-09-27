@@ -29,5 +29,10 @@ unsigned int _strspn(char *s, char *accept)
 		}
 		i++;
 	}
-	return (counter);
+	if (*(s + i) == *(accept + j))
+	{
+		return (counter);
+	}
+	else
+		return ('\0');
 }
