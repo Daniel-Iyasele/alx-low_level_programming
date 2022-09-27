@@ -20,7 +20,7 @@ unsigned int _strspn(char *s, char *accept)
 			if (*(s + i) == *(accept + j))
 			{
 				if (*(s + i) == *(s + i - 1))
-					counter = counter - 1;
+					s++;
 				else
 					counter = counter + 1;
 				break;
