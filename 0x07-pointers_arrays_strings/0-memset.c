@@ -10,18 +10,14 @@
 char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int i;
+	char *beg_s;
 
+	beg_s = s;
 	i = 0;
-	while (*(s + i) && i < n)
+	while (b && i < n)
 	{
-		*(s + i) = b;
-		_putchar(*(s + i));
-		if ((i % 10 == 0) && i < n)
-		{
-			_putchar('\n');
-		}
-		else if (i < n)
-			_putchar(' ');
+		*(beg_s + i) = b;
+		*(s + i) = *(beg_s + i);
 		i++;
 	}
 	return (s);
