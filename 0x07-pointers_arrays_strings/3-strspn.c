@@ -10,12 +10,10 @@ unsigned int _strspn(char *s, char *accept)
 {
 	int i, j, counter;
 
-	i = 0;
 	counter = 0;
-	while (*(s + i))
+	for (i = 0; *(s + i) != '\0'; i++)
 	{
-		j = 0;
-		while (*(accept + j))
+		for (j = 0; *(accept + j) != '\0'; j++)
 		{
 			if (*(s + i) == *(accept + j))
 			{
@@ -25,9 +23,7 @@ unsigned int _strspn(char *s, char *accept)
 					counter = counter + 1;
 				break;
 			}
-			j++;
 		}
-		i++;
 	}
 	if (*(s + i) == *(accept + j))
 	{
