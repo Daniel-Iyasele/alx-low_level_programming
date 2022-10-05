@@ -10,9 +10,9 @@ char *_strdup(char *str)
 {
 	int i, len;
 	char *ptr;
-	
+
 	i = 0;
-	while (*str != '\0')
+	while (*(str + i) != '\0')
 	{
 		i++;
 	}
