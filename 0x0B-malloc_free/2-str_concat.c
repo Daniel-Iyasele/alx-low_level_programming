@@ -13,11 +13,12 @@ char *str_concat(char *s1, char *s2)
 	/* combined_len is the sum of length of s1 & s2*/
 	char *ptr;
 
-	if (s1 == NULL || s2 == NULL)/*if stament to handle null string */
+	if (s1 == NULL)/*if stament to handle null string */
 	{
 		*s1 = "";
-		*s2 = "";
 	}
+	if (s2 == NULL)
+		*s2 = "";
 	for (i = 0; *(s1 + i) != '\0'; i++)
 	{
 	}
