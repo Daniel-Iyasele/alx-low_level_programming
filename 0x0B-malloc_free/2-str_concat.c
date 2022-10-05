@@ -17,8 +17,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		if (s1 == NULL)
 		{
-			i = 1;
-			return ("");
+			return ('\0');
 		}
 	}
 	len_of_s1 = i;
@@ -26,8 +25,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		if (s2 == NULL)
 		{
-			j = 1;
-			return ("");
+			return ('\0');
 		}
 	}
 	len_of_s2 = j;
