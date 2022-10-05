@@ -13,6 +13,11 @@ char *str_concat(char *s1, char *s2)
 	/* combined_len is the sum of length of s1 & s2*/
 	char *ptr;
 
+	if (s1 == NULL || s2 == NULL)/*if stament to handle null string */
+	{
+		*s1 = "";
+		*s2 = "";
+	}
 	for (i = 0; *(s1 + i) != '\0'; i++)
 	{
 	}
@@ -23,6 +28,10 @@ char *str_concat(char *s1, char *s2)
 	len_of_s2 = j;
 	combined_len = len_of_s1 + len_of_s2;
 	ptr = malloc((combined_len + 1) * sizeof(char));
+	if (ptr == NULL)
+	{
+		return (NULL);
+	}
 	for (i = 0; i < len_of_s1; i++)
 	{
 		ptr[i] = s1[i];
