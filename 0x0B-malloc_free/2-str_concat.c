@@ -3,21 +3,19 @@
  * str_concat - concatenates two strings using malloc
  * @s1: first string
  * @s2: second string to be concatenated
- *
- * Return: a string using malloc pointer else null
+ *Return: a string using malloc pointer else null
  */
 char *str_concat(char *s1, char *s2)
 {
 	int i, j, len_of_s1, len_of_s2, combined_len;
-	/* i,j are the indices for string s1 & s2*/
-	/* combined_len is the sum of length of s1 & s2*/
 	char *ptr;
 
 	for (i = 0; *(s1 + i) != '\0'; i++)
 	{
 		if (s1 == NULL)
 		{
-			return ('\0');
+			*s1 = '\0';
+			return (s1);
 		}
 	}
 	len_of_s1 = i;
@@ -25,7 +23,8 @@ char *str_concat(char *s1, char *s2)
 	{
 		if (s2 == NULL)
 		{
-			return ('\0');
+			*s2 = '\0'
+			return (s2);
 		}
 	}
 	len_of_s2 = j;
@@ -37,10 +36,20 @@ char *str_concat(char *s1, char *s2)
 	}
 	for (i = 0; i < len_of_s1; i++)
 	{
+		if (s1 == '\0')
+		{
+			ptr[i] = '\0';
+			return (ptr);
+		}
 		ptr[i] = s1[i];
 	}
 	for (j = 0; j < len_of_s2; j++)
 	{
+		if (s2 == '\0')
+		{
+			ptr[i + j] = '\0';
+			return (ptr);
+		}
 		ptr[i + j] = s2[j];
 	}
 	ptr[combined_len] = '\0';
