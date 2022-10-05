@@ -16,16 +16,16 @@ char *create_array(unsigned int size, char c)
 	{
 		return (NULL);
 	}
-	i = 0;
-	while (i < size)
+	if (size == 0)
+		return (NULL);
+	else 
 	{
-		ptr[i] = c;
-		/*_putchar(ptr[i]);*/
-		/*if (i < size)*/
-			/*_putchar(' ');*/
-		/*if (i % 10 == 0)*/
-			/*_putchar('\n');*/
-		i++;
+		i = 0;
+		while (i < size)
+		{
+			ptr[i] = c;
+			i++;
+		}
 	}
 	return (ptr);
 }
