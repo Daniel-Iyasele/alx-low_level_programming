@@ -9,7 +9,12 @@
  */
 void print_dog(struct dog *d)
 {
-	if (d->name == NULL || d->owner == NULL)
-		printf("nil\n");
-	printf("Name: %s\nAge: %.6f\nOwner: %s\n", d->name, d->age, d->owner);
+	if (d->name == NULL)
+		d->name = "nil";
+	if (d->owner == NULL)
+		d->owner = "nil";
+	if (d == NULL)
+		exit(1);
+	else
+		printf("Name: %s\nAge: %.6f\nOwner: %s\n", d->name, d->age, d->owner);
 }
