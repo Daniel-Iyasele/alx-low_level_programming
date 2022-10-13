@@ -8,7 +8,8 @@
  */
 void print_name(char *name, void(*f)(char *))
 {
-	for (int i = 0; *(name + i) != '\0'; i++)
+	int i;
+	for (i = 0; *(name + i) != '\0'; i++)
 	{
 	}
 	(*f)(name);
