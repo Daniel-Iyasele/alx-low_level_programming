@@ -18,7 +18,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		{
 			printf("%c ", *separator);
 		}
-		else if (*separator == '\0')
+		else if (separator == NULL)
 		{
 		}
 	}
