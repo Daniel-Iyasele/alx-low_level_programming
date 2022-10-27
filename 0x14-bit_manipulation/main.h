@@ -6,4 +6,5 @@ unsigned int binary_to_uint(const char *b);
 unsigned int power(unsigned int a, unsigned int b);
 int check_string(const char *b);
 void print_binary(unsigned long int n);
+int _putchar(char c);
 #endif /*main_h*/
