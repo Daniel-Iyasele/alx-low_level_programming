@@ -1,32 +1,25 @@
 #include <stdio.h>
 #include  <stdlib.h>
-/** 
- * program to print two numbe combination from 0-9 in which
- * the numbers must be distinc
- * separated by comma
- * and number patterns containing the same digits must not repaeat itsef i.e 01=10
- */
+/*program prints two distinct number combination from 0-9 in which */
 /**
- * main-entrypoint
- *
+ * main- entrypoint
  * Return: always 0
  */
-int main(void){
-	int j;
-	int first = '0';
+int main(void)
+{
+	int j, first, i;
 	int second = j = '9';
-	
-	for (first; first <= second; first++)
+
+	for (first = '0'; first <= second; first++)
 	{
-		for (int i = first + 1; i <= j; i++)
+		for (i = first + 1; i <= j; i++)
 		{
 			putchar(first);
 			putchar(i);
-			if ((first != j) || (i != second))
-			{
-				putchar(',');
-				putchar(' ');
-			}
+			if (first == '8' && i == '9')
+				break;
+			putchar(',');
+			putchar(' ');
 		}
 	}
 	putchar('\n');
