@@ -14,27 +14,38 @@ void times_table(void)
 			mult = i * j;
 			if (mult > 9)
 			{
-				first = mult / 10;
-				last = mult % 10;
-				first = first + '0';
-				last = last + '0';
-				_putchar(first);
-				_putchar(last);
-				if (j < 9)
+				first = (mult / 10) + '0';
+				last = (mult % 10) + '0';
+				if (j == 0)
 				{
+					_putchar(first);
+					_putchar(last);
 					_putchar(',');
+				}
+				else if (j > 0)
+				{
 					_putchar(' ');
+					_putchar(first);
+					_putchar(last);
+					if (j < 9)
+						_putchar(',');
 				}
 			}
 			else
 			{
 				mult = mult + '0';
-				_putchar(mult);
-				if (j < 9)
+				if (j == 0)
 				{
+					_putchar(mult);
 					_putchar(',');
+				}
+				else if (j > 0)
+				{
 					_putchar(' ');
 					_putchar(' ');
+					_putchar(mult);
+					if (j < 9)
+						_putchar(',');
 				}
 			}
 		}
