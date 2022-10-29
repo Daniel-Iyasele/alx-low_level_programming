@@ -8,12 +8,16 @@
  */
 int main(void)
 {
-	int first_hex_digit = 0x30, last_hex_digit = 0xF;
+	int first;
 
-	while (first_hex_digit <= last_hex_digit)
+	for (first = 0; first <= 15; first++)
 	{
-		putchar(first_hex_digit);
-		first_hex_digit++;
+		if (first > 9)
+		{
+			putchar(('a' + first - 10));
+		}
+		else
+			putchar((first + '0'));
 	}
 	putchar('\n');
 	return (0);
