@@ -20,20 +20,22 @@ void times_table(void)
 				last = last + '0';
 				_putchar(first);
 				_putchar(last);
+				if (j < 9)
+				{
+					_putchar(',');
+					_putchar(' ');
+				}
 			}
 			else
 			{
 				mult = mult + '0';
 				_putchar(mult);
-			}
-			if (j < 9)
-			{
-				_putchar(',');
-			}
-			_putchar(' ');
-			if (i <= 1 && j > 1)
-			{
-				_putchar(' ');
+				if (j < 9)
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+				}
 			}
 		}
 		_putchar('\n');
