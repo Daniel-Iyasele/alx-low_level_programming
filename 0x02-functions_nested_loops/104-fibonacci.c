@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	unsigned long fib, first, second, next, i;
+	unsigned long first, second, next, i;
 
 	first = 1;
 	second = 2;
